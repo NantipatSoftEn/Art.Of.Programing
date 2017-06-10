@@ -19,6 +19,11 @@ int main(int argc, char const *argv[]) {
         string n,nsub;
         long long base,cv,nlong,nsum=0;
         map<string, long long> mp;
+        /*
+            nsub  = sub string
+            nlong = convent to int
+            map   = cheak A-F
+        */
         mp["A"] = 10; mp["B"] = 11; mp["C"] = 12; mp["D"] = 13; mp["E"] = 14; mp["F"] = 15;
         while (cin >> n >> base >> cv)
         {
@@ -41,7 +46,7 @@ int main(int argc, char const *argv[]) {
                         res = d[nsum % cv] + res;
                         nsum /= cv;
                 }
-                nsum = 0;
+                nsum = 0; //reset
 
                 if (res.size() == 0)
                         res = "0";
